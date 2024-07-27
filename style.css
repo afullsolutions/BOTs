@@ -128,7 +128,7 @@ h1 {
     max-width: 20rem;
 }
 
-.youtube-link {
+.popup-link {
     display: block;
     margin-top: 0.5rem;
     color: #ffb703;
@@ -148,7 +148,7 @@ ul.boti {
     transform: translate(-50%, -50%);
     width: 80%;
     max-width: 640px;
-    background-color: #fff;
+    background-color: #000000;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
     z-index: 1000;
     padding: 1rem;
@@ -156,8 +156,9 @@ ul.boti {
 
 .popup iframe {
     width: 100%;
-    height: 360px;
+    height: 30rem;
 }
+
 
 .popup .close {
     position: absolute;
@@ -165,5 +166,5 @@ ul.boti {
     right: 10px;
     font-size: 1.5rem;
     cursor: pointer;
-    color: black;
+    color: #ffb703;
 }
