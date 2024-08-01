@@ -1,4 +1,16 @@
-/* ---- reset ---- */
+/* El overlay oscuro */
+/* El overlay oscuro */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Un poco más transparente */
+    display: none; /* Inicialmente oculto */
+    z-index: 1001; /* Asegura que esté sobre otros elementos */
+}
+
 body {
     margin: 0;
     font: normal 75% Arial, Helvetica, sans-serif;
@@ -8,15 +20,146 @@ body {
     min-height: 100vh;
     background-color: #333;
     /* Fondo oscuro */
-    color: grey;
+    color: darkgray;
     /* Color del texto */
     position: relative;
     overflow: hidden;
     background: radial-gradient(ellipse at center, #333 0%, #111 100%);
 }
 
-h1 {
+.menu{
+    display: grid;
+    gap: 1rem;
+    margin: 0rem 2rem 0 0;
+}
+
+
+.pergamino {
+    display: grid;
+    z-index: 1;
+    padding: 1rem;
+    border: 1px solid #023047;
+    background-color: #111827;
+    /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+    /* Sombras para el efecto 3D */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out;
+    /* Transición suave */
+    text-align: center;
+    justify-items: center;
+    font-size: 1rem;
+    width: 10rem;
+}
+
+.pergamino:hover{
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+        0 12px 24px rgba(0, 0, 0, 0.22);
+    /* Sombras más pronunciadas al pasar el cursor */
+}
+
+strong{
     color: white;
+}
+
+.lunabot{
+    color: white;
+}
+
+.color-price{
+    color:white;
+    font-size: 1rem;
+}
+
+.color-sub{
+    color:darkgray;
+    font-size: 1rem;
+}
+
+.link {
+    margin: 1rem 0;
+    padding: 1rem 2rem 1rem 2rem;
+    border: 1px solid #023047;
+    background-color: #111827;
+    /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+    /* Sombras para el efecto 3D */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out;
+    /* Transición suave */
+    cursor: pointer;
+    color: #ffb703;
+    text-decoration: none;
+}
+
+.link:hover{
+    background: #023047;
+    color: white;
+}
+
+.color-descripcion{
+    color:#ffb703;
+}
+
+.register {
+    z-index: 1;
+    padding: 1rem;
+    border: 1px solid #023047;
+    background-color: #111827;
+    /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+    /* Sombras para el efecto 3D */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out;
+    /* Transición suave */
+    text-align: center;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color:rgb(0, 183, 255);
+}
+
+.register:hover {
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+        0 12px 24px rgba(0, 0, 0, 0.22);
+    /* Sombras más pronunciadas al pasar el cursor */
+    background: #023047;
+}
+
+
+
+.cancela{
+    color: white;
+    font-size: 1rem;
+}
+
+.clickaqui-color{
+    color: rgb(0, 183, 255);
+    text-decoration: underline;
+}
+
+.clickaqui-color:hover{
+    background:#023047;
+}
+
+
+
+h1 {
+    display: flex;
+    color: white;
+    font-size: 1.2rem;
 }
 
 /* ---- particles.js container ---- */
@@ -69,7 +212,7 @@ h1 {
     display: flex;
     flex-direction: column;
     text-align: center;
-    z-index: 1;
+    z-index: 0;
     /* Asegúrate de que el contenido esté encima del canvas */
 }
 
@@ -96,7 +239,6 @@ h1 {
     /* Sombras más pronunciadas al pasar el cursor */
 }
 
-
 .bot-content {
     display: flex;
     align-items: center;
@@ -122,21 +264,50 @@ h1 {
     /* Agranda la imagen un poco al hacer hover */
 }
 
+.bot-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 18rem; /* Ajustar el ancho máximo para que sea más compacto */
+}
+
+
 .description {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    padding: 0.5rem 1rem; /* Ajustar el relleno para que sea más compacto */
+    border: 1px solid #023047;
+    background-color: #111827;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
     text-align: left;
-    max-width: 20rem;
+    margin-bottom: 0.5rem; /* Espacio entre la descripción y los enlaces */
 }
 
 .popup-link {
-    display: block;
-    margin-top: 0.5rem;
-    color: #ffb703;
-    text-decoration: underline;
+    padding: 0.5rem 1rem; /* Ajustar el relleno para que sea más compacto */
+    border: 1px solid #023047;
+    background-color: #111827;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
     cursor: pointer;
+    color: #ffb703;
+    text-decoration: none;
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
 }
 
-ul.boti {
+.popup-link:hover{
+    color: white;
+    background: #023047;
+}
+
+.links {
+    display: flex;
+    gap: 0.5rem; /* Espacio entre los enlaces */
+}
+
+ul.linklunabot {
     display: none;
 }
 
@@ -146,19 +317,20 @@ ul.boti {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 640px;
-    background-color: #000000;
+    width: 50%;
+    border: 1px solid #023047;
+    background-color: #111827;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
-    z-index: 1000;
-    padding: 1rem;
+    z-index: 1001; /* Asegura que esté sobre el overlay */
+    padding: 2rem 2rem 2rem 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s;
 }
 
 .popup iframe {
     width: 100%;
     height: 30rem;
 }
-
 
 .popup .close {
     position: absolute;
@@ -167,4 +339,84 @@ ul.boti {
     font-size: 1.5rem;
     cursor: pointer;
     color: #ffb703;
+}
+
+/* Ajustes específicos para los popups de precio y suscripción */
+#popup-suscribirte{
+    z-index: 1001; /* Asegura que estén sobre el overlay */
+}
+
+/*user popup*/
+
+#user-popup {
+    width: 12rem;
+    padding: 1rem;
+    margin: -9rem 0 0 31rem;
+    border: 1px solid #023047;
+    background-color: #111827;
+    /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+    /* Sombras para el efecto 3D */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    transition: transform 0.3s ease-in-out;
+    /* Transición suave */
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
+.image-suscripcion{
+    display: grid;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+    /* Efecto 3D */
+    transition: transform 0.2s ease-in-out;
+    /* Transición suave */
+}
+
+.image-suscripcion:hover {
+    transform: scale(1.1);
+    /* Agranda la imagen un poco al hacer hover */
+}
+
+/*footer*/
+
+#terminos{
+    z-index: 1;
+    cursor: pointer;
+    color: rgb(0, 183, 255);
+    padding: 1rem;
+    border: 1px solid #023047;
+    text-align: center;
+}
+
+#terminos:hover{
+    transform: translateY(-5px);
+    /* Efecto de elevación al pasar el cursor */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3),
+        0 12px 24px rgba(0, 0, 0, 0.22);
+    /* Sombras más pronunciadas al pasar el cursor */
+    background: #023047;
+}
+
+/*create by: afullsolutions*/
+
+.createb{
+    display: flex;
+    color: #ffb80365;
+    z-index: 1;
+    justify-content: left;
+    margin-top: 5rem;
+    
+}
+
+.createb-af{
+    color: rgba(0, 183, 255, 0.452);
+    cursor: pointer;
 }

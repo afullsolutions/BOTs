@@ -1,223 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>BOTs</title>
-  </head>
-  <body>
+</head>
+
+<body>
+
+    <!--fondo oscuro-->
+    <div id="overlay" class="overlay"></div>
+
+    <!--registro-->
+
+    <div class="menu">
+        <div class="register">
+            <a href="https://huggingface.co/join" onclick="openSmallWindow(event, 'https://huggingface.co/join'); return false;">Registro Hugging</a>
+        </div>
+        <!--suscripcion-->
+        <div class="pergamino">
+            <img src="img/robot boti.jpg" alt="BOTI" class="image-suscripcion" />
+            <p>Suscríbete a <br><strong>💎LUNABOT</strong> y conquista tu objetivo.</p>
+            <p class="link" id="suscribirte">Suscríbete</p>
+        </div>
+        <a id="terminos" href="terminos.html" class="popup-link"
+        onclick="openPopup(event, 'terminos.html')">Terminos y condiciones</a>
+        <p class="createb">Create by:&nbsp;<span class="createb-af">afullsolutions</span></p>
+    </div>
+
+    <!-- Popups -->
+
+    <div id="popup-suscribirte" class="popup">
+        <div class="popup-content">
+            <span class="close" id="close-suscribirte">&times;</span>
+            </span>
+            <p class="color-sub"><span class="color-price">$4.999</span> al mes. Con <span
+                    class="lunabot">💎LUNABOT</span>, obtendrás acceso a funciones exclusivas y soporte prioritario.<a
+                    class="clickaqui-color" href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380849082b3f60190a54c66a40b04" target="_blank"> Haz clic aquí
+                    para suscribirte</a><span class="cancela">, cancela cuando quieras.</p>
+        </div>
+    </div>
+
+    </div>
+
     <!-- particles.js container -->
     <div id="particles-js"></div>
 
     <div class="container">
-      <div class="bot-section">
-        <h1>💎BOTI</h1>
-        <div class="bot-content">
-          <a
-            href="https://www.mercadopago.com.ar/subscriptions/checkout?preapproval_plan_id=2c9380849082b3f60190a54c66a40b04"
-          >
-            <img src="img/boti2000.jpg" alt="BOTI" class="bot-image" />
-          </a>
-          <p class="description">
-            Este bot te permitirá corregir tus respuestas en actividades,
-            trabajos prácticos y exámenes, asegurándote de que sean correctas.
-            Nota: El uso de este bot es educativo y el usuario es responsable de
-            cómo lo utiliza.
-          </p>
-          <a
-            href="https://www.youtube.com/watch?v=tutorial-id"
-            class="popup-link"
-            onclick="openPopup(event, 'https://www.youtube.com/embed/tutorial-id')"
-            >Tutorial de uso</a
-          >
+        <div class="bot-section">
+            <h1>💎LUNABOT</h1>
+            <div class="bot-content">
+                <img src="img/robot boti.jpg" alt="BOTI" class="bot-image" />
+                <div class="bot-description">
+                    <p class="description">
+                        Este bot te permitirá corregir tus respuestas en actividades, trabajos prácticos y exámenes,
+                        asegurándote de que sean correctas. Nota: El uso de este bot es educativo y el usuario es
+                        responsable de cómo lo utiliza.
+                    </p>
+                    <div class="links">
+                        <a href="https://www.youtube.com/watch?v=tutorial-id" class="popup-link"
+                            onclick="openPopup(event, 'https://www.youtube.com/embed/tutorial-id')">Tutorial de uso</a>
+                        <a href="#" class="popup-link" onclick="openUserPopup(event)">Usuario</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="bot-section">
-        <h1>⭐INFOBOT</h1>
-        <div class="bot-content">
-          <a href="#">
-            <img src="img/infobot.jpg" alt="INFOBOT" class="bot-image" />
-          </a>
-          <p class="description">
-            Este bot te permitirá consultar temas en general relacionados con la
-            institucion Adultos 2000 (inscripciones, trabajo integrador,
-            fechas). Nota: El uso de este bot es educativo y el usuario es
-            responsable de cómo lo utiliza.
-          </p>
-          <a
-            href="https://www.youtube.com/watch?v=tutorial-id"
-            class="popup-link"
-            onclick="openPopup(event, 'https://www.youtube.com/embed/tutorial-id')"
-            >Tutorial de uso</a
-          >
-          <a
-            href="https://hf.co/chat/assistant/66a498d5c5335feb6d2af2e8"
-            class="popup-link"
-            onclick="openPopup(event, 'https://hf.co/chat/assistant/66a498d5c5335feb6d2af2e8')"
-            >Iniciar</a
-          >
+        <div class="bot-section">
+            <h1>⭐INFOBOT</h1>
+            <div class="bot-content">
+                <img src="img/infobot.jpg" alt="INFOBOT" class="bot-image" />
+                <div class="bot-description">
+                    <p class="description">
+                        Este bot te permitirá consultar temas en general relacionados con la institucion Adulto2000
+                        (inscripciones, trabajo integrador, fechas). Nota: El uso de este bot es educativo y el usuario
+                        es responsable de cómo lo utiliza.
+                    </p>
+                    <div class="links">
+                        <a href="https://www.youtube.com/watch?v=tutorial-id" class="popup-link"
+                            onclick="openPopup(event, 'https://www.youtube.com/embed/tutorial-id')">Tutorial de uso</a>
+                        <a href="https://hf.co/chat/assistant/66a498d5c5335feb6d2af2e8" class="popup-link"
+                            onclick="openPopup(event, 'https://hf.co/chat/assistant/66a498d5c5335feb6d2af2e8')">Iniciar</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <ul class="boti">
+    <ul class="linklunabot">
         <!-- boti links -->
-        <li>
-          <a href="boti/Antropología C (NES).pdf" target="_blank"
-            >Antropología C</a
-          >
-        </li>
-        <li>
-          <a href="boti/Arte y Ciudadanía A (NES).pdf" target="_blank"
-            >Arte y Ciudadanía A</a
-          >
-        </li>
-        <li>
-          <a href="boti/Biología A (NES) Guía de Esudio.pdf" target="_blank"
-            >Biología A</a
-          >
-        </li>
-        <li>
-          <a href="boti/Biología B (NES) Guía de Esudio.pdf" target="_blank"
-            >Biología B</a
-          >
-        </li>
-        <li>
-          <a
-            href="boti/Ciudadanía y Trabajo (NES) Reedición Abril 2019.pdf"
-            target="_blank"
-            >Ciudadanía y Trabajo</a
-          >
-        </li>
-        <li>
-          <a href="boti/Economía C NES.pdf" target="_blank">Economía C</a>
-        </li>
-        <li>
-          <a
-            href="boti/Ed para la Salud (NES) Guía de Estudio.pdf"
-            target="_blank"
-            >Ed para la Salud</a
-          >
-        </li>
-        <li>
-          <a href="boti/Educación Tecnológica A (NES).pdf" target="_blank"
-            >Educación Tecnológica A</a
-          >
-        </li>
-        <li>
-          <a href="boti/Filosofía B (NES) 2021.pdf" target="_blank"
-            >Filosofía B</a
-          >
-        </li>
-        <li>
-          <a href="boti/Filosofía C (NES) 2021.pdf" target="_blank"
-            >Filosofía C</a
-          >
-        </li>
-        <li>
-          <a
-            href="boti/Formación Ética y Ciudadana (NES) - Reedición Abril 2019.pdf"
-            target="_blank"
-            >Formación Ética y Ciudadana</a
-          >
-        </li>
-        <li><a href="boti/Física B (NES).pdf" target="_blank">Física B</a></li>
-        <li>
-          <a href="boti/Geografía A (NES).pdf" target="_blank">Geografía A</a>
-        </li>
-        <li>
-          <a href="boti/Geografía B (NES).pdf" target="_blank">Geografía B</a>
-        </li>
-        <li>
-          <a href="boti/Historia A (NES) Octubre2019.pdf" target="_blank"
-            >Historia A</a
-          >
-        </li>
-        <li>
-          <a href="boti/Historia B (NES) Octubre2019.pdf" target="_blank"
-            >Historia B</a
-          >
-        </li>
-        <li>
-          <a
-            href="boti/INGLES A (NES) - Guía de Estudio V2019.pdf"
-            target="_blank"
-            >INGLES A</a
-          >
-        </li>
-        <li><a href="boti/Inglés B (NES).pdf" target="_blank">Inglés B</a></li>
-        <li>
-          <a
-            href="boti/Lengua y Literatura A (NES) 3ra edición2020.pdf"
-            target="_blank"
-            >Lengua y Literatura A</a
-          >
-        </li>
-        <li>
-          <a href="boti/Lengua y Literatura B (NES).pdf" target="_blank"
-            >Lengua y Literatura B</a
-          >
-        </li>
-        <li>
-          <a href="boti/Matemática A (NES).pdf" target="_blank">Matemática A</a>
-        </li>
-        <li>
-          <a href="boti/Matemática B (NES).pdf" target="_blank">Matemática B</a>
-        </li>
-        <li>
-          <a href="boti/Psicología B (NES).pdf" target="_blank">Psicología B</a>
-        </li>
-        <li>
-          <a href="boti/Psicología C (NES).pdf" target="_blank">Psicología C</a>
-        </li>
-        <li>
-          <a href="boti/Quimica A (NES) Noviembre2020.pdf" target="_blank"
-            >Quimica A</a
-          >
-        </li>
-        <li>
-          <a href="boti/Sociología C (NES).pdf" target="_blank">Sociología C</a>
-        </li>
+<link rel="stylesheet" href="lunabot/Antropología C (NES).pdf">
+<link rel="stylesheet" href="lunabot/Arte y Ciudadanía A (NES).pdf">
+<link rel="stylesheet" href="lunabot/Biología B (NES) Guía de Esudio.pdf">
+<link rel="stylesheet" href="lunabot/Ciudadanía y Trabajo (NES) Reedición Abril 2019.pdf">
+<link rel="stylesheet" href="lunabot/Economía C NES.pdf">
+<link rel="stylesheet" href="lunabot/Ed para la Salud (NES) Guía de Estudio.pdf">
+<link rel="stylesheet" href="lunabot/Educación Tecnológica A (NES).pdf">
+<link rel="stylesheet" href="lunabot/Filosofía B (NES) 2021.pdf">
+<link rel="stylesheet" href="lunabot/Filosofía C (NES) 2021.pdf">
+<link rel="stylesheet" href="lunabot/Formación Ética y Ciudadana (NES) - Reedición Abril 2019.pdf">
+<link rel="stylesheet" href="lunabot/Física B (NES).pdf">
+<link rel="stylesheet" href="lunabot/Geografía A (NES).pdf">
+<link rel="stylesheet" href="lunabot/Geografía B (NES).pdf">
+<link rel="stylesheet" href="lunabot/Historia A (NES) Octubre2019.pdf">
+<link rel="stylesheet" href="lunabot/Historia B (NES) Octubre2019.pdf">
+<link rel="stylesheet" href="lunabot/INGLES A (NES) - Guía de Estudio V2019.pdf">
+<link rel="stylesheet" href="lunabot/Inglés B (NES).pdf">
+<link rel="stylesheet" href="lunabot/Lengua y Literatura A (NES) 3ra edición2020.pdf">
+<link rel="stylesheet" href="lunabot/Lengua y Literatura B (NES).pdf">
+<link rel="stylesheet" href="lunabot/Matemática A (NES).pdf">
+<link rel="stylesheet" href="lunabot/Matemática B (NES).pdf">
+<link rel="stylesheet" href="lunabot/Psicología B (NES).pdf">
+<link rel="stylesheet" href="lunabot/Psicología C (NES).pdf">
+<link rel="stylesheet" href="lunabot/Quimica A (NES) Noviembre2020.pdf">
+<link rel="stylesheet" href="lunabot/Sociología C (NES).pdf">
         <!--infobot links-->
-        <li><a href="infobot/Informes.txt" target="_blank">Informes</a></li>
-        <li>
-          <a
-            href="infobot/que es adultos 2000_ _ planes de estudio y correlatividades - adultos2000.pdf"
-            target="_blank"
-            >Info adultos 2000</a
-          >
-        </li>
-        <li>
-          <a
-            href="infobot/Trabajo Integrador (NES) Material Complementario.pdf"
-            target="_blank"
-            >Trabajo integrador aterial complementario</a
-          >
-        </li>
-        <li>
-          <a
-            href="infobot/Trabajo Integrador (NES) Requisitos mínimos Entrega.pdf"
-            target="_blank"
-            >Trabajo Integrador requisitos minimos</a
-          >
-        </li>
-        <li>
-          <a href="infobot/Trabajo Integrador (NES).pdf" target="_blank"
-            >Trabajo integrador</a
-          >
-        </li>
-      </ul>
+        <link rel="stylesheet" href="infobot/Informes.txt">
+        <link rel="stylesheet" href="infobot/que es adultos 2000_ _ planes de estudio y correlatividades - adultos2000.pdf">
+        <link rel="stylesheet" href="infobot/Trabajo Integrador (NES) Material Complementario.pdf">
+        <link rel="stylesheet" href="infobot/Trabajo Integrador (NES) Requisitos mínimos Entrega.pdf">
+        <link rel="stylesheet" href="infobot/Trabajo Integrador (NES).pdf">
+    </ul>
     </div>
 
     <div id="popup" class="popup">
-      <span class="close" onclick="closePopup()">&times;</span>
-      <iframe id="popup-iframe" src="" frameborder="0" allowfullscreen></iframe>
+        <span class="close" onclick="closePopup()">&times;</span>
+        <iframe id="popup-iframe" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div id="user-popup" class="popup">
+        <span class="close" onclick="closeUserPopup()">&times;</span>
+        <h3>Ingresa tu nombre de usuario y contraseña:</h3>
+        <form onsubmit="validateUser(event)">
+            <label for="username">Nombre de usuario:</label>
+            <input type="text" id="username" name="username" required>
+            <br><br>
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            <br><br>
+            <button type="submit">Ingresar</button>
+        </form>
     </div>
 
     <!-- scripts -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
     <script src="script.js"></script>
-  </body>
+    <script src="suscripcion.js"></script>
+</body>
 </html>
