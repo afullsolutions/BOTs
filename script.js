@@ -1,5 +1,5 @@
 const userPasswords = {
-    'Brian P': '1234',
+    'Brian P': 'titanico13',
     'Gabita': '5678',
   };
   
