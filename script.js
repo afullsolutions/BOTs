@@ -1,6 +1,6 @@
 const userPasswords = {
     'Brian P': 'titanico13',
-    'Gabita': '5678',
+    'Gabita': 'titanico14',
   };
   
   const userRedirects = {
