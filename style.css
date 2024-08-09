@@ -1,5 +1,4 @@
 /* El overlay oscuro */
-/* El overlay oscuro */
 .overlay {
     position: absolute;
     top: 0;
@@ -420,10 +419,31 @@ ul.linklunabot {
     cursor: pointer;
 }
 
+.content_movil {
+    display: none; /* Inicialmente oculto */
+    text-align: center;
+    position: fixed; /* Asegura que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111827; /* Fondo semi-transparente */
+    color: white; /* Color del texto */
+    justify-content: center; /* Centrado verticalmente */
+    align-items: center; /* Centrado horizontalmente */
+    z-index: 1002; /* Asegúrate de que esté por encima del resto del contenido */
+}
 
 /* Media query para dispositivos móviles */
 @media (max-width: 723px) {
     body {
-        display: none;
+
+    }
+
+    .content_movil {
+        display: flex; /* Muestra el contenido móvil */
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
     }
 }

@@ -59,6 +59,7 @@ const userPasswords = {
     const password = document.getElementById('password').value;
   
     if (userPasswords[username] === password) {
+        closeUserPopup();
       openPopup(event, userRedirects[username]);
     } else {
       alert('Nombre de usuario o clave inválida. Inténtelo de nuevo.');
