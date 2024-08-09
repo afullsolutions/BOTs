@@ -71,10 +71,10 @@ const userPasswords = {
   window.onload = function() {
     const videoShown = localStorage.getItem('videoShown');
 
-    if (!videoShown) {
-      openPopup(null, 'video/videotutorialbots.mp4');
-      localStorage.setItem('videoShown', 'true');
-    }
+    if (!videoShown && window.innerWidth > 723) { // Cambia 768 a tu punto de quiebre preferido
+        openPopup(null, 'video/videotutorialbots.mp4'); // Asegúrate de que la ruta sea correcta
+        localStorage.setItem('videoShown', 'true');
+      }
   };
 
 
