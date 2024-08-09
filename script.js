@@ -16,8 +16,15 @@ const userPasswords = {
     document.getElementById("popup-iframe").src = url;
     document.getElementById('overlay').style.display = 'block';
     document.getElementById("popup").style.display = "block";
-  }
   
+
+
+// Reprodice el video automaticamente
+        const videoElement =
+    document.getElementById("popup-video");
+        videoElement.onplay();
+    }
+
   function closePopup() {
     document.getElementById('overlay').style.display = 'none';
     document.getElementById("popup").style.display = 'none';
@@ -64,7 +71,7 @@ const userPasswords = {
     const videoShown = localStorage.getItem('videoShown');
 
     if (!videoShown) {
-      openPopup(null, 'https://www.youtube.com/embed/XbNBMnaWgwQ?vq=hd720&si=o2Qj9Y1zZ_qXyo3I');
+      openPopup(null, 'video/videotutorialbots.mp4');
       localStorage.setItem('videoShown', 'true');
     }
   };
