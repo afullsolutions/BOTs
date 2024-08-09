@@ -9,7 +9,10 @@ const userPasswords = {
   };
   
   function openPopup(event, url) {
-    event.preventDefault();
+    if (event) {
+      event.preventDefault();
+    }
+
     document.getElementById("popup-iframe").src = url;
     document.getElementById('overlay').style.display = 'block';
     document.getElementById("popup").style.display = "block";
@@ -17,8 +20,8 @@ const userPasswords = {
   
   function closePopup() {
     document.getElementById('overlay').style.display = 'none';
-    document.getElementById("popup").style.display = "none";
-    document.getElementById("popup-iframe").src = "";
+    document.getElementById("popup").style.display = 'none';
+    document.getElementById("popup-iframe").src = '';
   }
   
   function openSmallWindow(event, url) {
@@ -49,12 +52,24 @@ const userPasswords = {
     const password = document.getElementById('password').value;
   
     if (userPasswords[username] === password) {
-        openPopup(event, userRedirects[username]);
+      openPopup(event, userRedirects[username]);
     } else {
-        alert('Nombre de usuario o clave inválida. Inténtelo de nuevo.');
+      alert('Nombre de usuario o clave inválida. Inténtelo de nuevo.');
     }
     closeUserPopup();
   }
+
+  // Abre el popup automáticamente al cargar la página si no se ha abierto antes
+  window.onload = function() {
+    const videoShown = localStorage.getItem('videoShown');
+
+    if (!videoShown) {
+      openPopup(null, 'https://www.youtube.com/embed/XbNBMnaWgwQ?vq=hd720&si=o2Qj9Y1zZ_qXyo3I');
+      localStorage.setItem('videoShown', 'true');
+    }
+  };
+
+
 
 //canvas
 particlesJS("particles-js", {
